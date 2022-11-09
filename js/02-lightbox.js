@@ -20,9 +20,8 @@ for (const item of galleryItems) {
   galleryList.appendChild(li);
 }
 
-console.log(galleryItems);
-
-let gallery = new SimpleLightbox(".gallery a");
-gallery.on("show.simplelightbox", function (e) {});
-
-console.log(SimpleLightbox);
+let gallery = new SimpleLightbox(".gallery a", {
+  captions: true,
+  captionsData: "alt",
+  captionDelay: 250,
+});
